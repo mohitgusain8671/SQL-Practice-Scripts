@@ -33,7 +33,7 @@ This repository contains my SQL practice exercises and learning materials. It co
 
 - `SalesDB.sql`
 
-<img src='salesDB.png' alt='salesdb-schema'/>
+<img src='SalesDB.png' alt='salesdb-schema'/>
 
 
 ### Tables Structure
