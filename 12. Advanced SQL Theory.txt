@@ -1,0 +1,56 @@
+SQL ARCHTITECTURE
+CLIENT --> Sent Query --> Server
+
+Server contains
+1. Database Engine: It is the brain of the DB, execute multiple operations such as storing, retrieving and managing data within the Database.
+2. Storage : Two types of Storage
+    A. Disk Storage: 
+        -> It is a long term memory where data is stored permanently.
+        -> It can hold large amount of data.
+        -> Slow to Read and to Write
+        There are 3 type of storage Areas: 
+        1. User -> It is the main content of DB. It is the place where all the actual data that user care about stored.
+        2. Catalog -> It is the place where all the metadata of DB is stored. A blueprint that keeps track of everything about the database itself not the user data.
+        3. Temp -> It is the place where all the temporary data is stored. It is used to store the data that is used for the current transaction. It is used by database to perform short tasks
+    B. Cache Storage:
+        -> It is a short term memory where data is stored temporarily.
+        -> It can hold small amount of data.
+        -> Fast to Read and to Write
+
+Client --> Sent Query --> Server --> Database Engine --> Storage --> Cache Storage --> Client
+
+Client --> Sent Query --> Server --> Database Engine --> Storage --> Cache Storage --> Not Found --> Database Engine --> Storage --> Disk Storage --> Query processing --> Sent Output to DB Engine --> Client
+
+--> How Database Execute SUbQuery in From Clause
+    1. Client Write a Query contain main and a subquery
+    2. Client send the query to the server
+    3. Database Engine execute the subquery and store the result in cache for faster retrieval
+    4. Database Engine execute the main query using the intermediate result of subquery from cache and sent result to client
+    5. DBEngine then cleans the intermediate result from cache
+
+--> How Database Execute SUbQuery in Select Clause
+    1. Client Write a Query contain main and a subquery
+    2. Client send the query to the server
+    3. Database Engine execute the subquery and pass the result to the main query 
+    4. Database Engine execute the main query using the intermediate result of subquery and sent result to client
+
+-->  How Database Execute SUbQuery in Where Clause (in comparsion operator)
+    1. Client Write a Query contain main and a subquery
+    2. Client send the query to the server
+    3. Database Engine execute the subquery and pass the result to the main query
+    4. Database Engine execute the main query using the intermediate result of subquery and sent result to client
+--> Same Execution Process in Logical IN, ALL, ANY Operator
+
+--> How Database Execute Co-Related SUbQuery or Exists correlated subquery
+    1. Client Write a Query contain main and a subquery
+    2. Client send the query to the server
+    3. DB Process main query row by row and pass the result to subquery which is used by subquery for processing which then processed by the DB Engine and result of subquery pass to main Query.
+    4. Database used the result of subquery for the current row add it in result and return the current row and move to the next row for processing.
+    5. if No result from subquery for a row DB Skip that row for the result.
+
+--> How Database Execute Non-CorRelated SUbQuery
+    1. Client Write a Query contain main and a subquery
+    2. Client send the query to the server
+    3. DB Process Subquery store intermediate result in cache.
+    4. DB Process main query using the intermediate result from cache and sent result to client
+    5. DBEngine then cleans the intermediate result from cache
