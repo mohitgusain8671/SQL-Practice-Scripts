@@ -5,10 +5,12 @@ This repository contains my SQL practice exercises and learning materials. It co
 ## Repository Structure
 
 ### Basic Concepts
+
 - `1. BASIC SQL.sql` - Fundamental SQL queries and syntax
 - `1.1 Operators.sql` - SQL operators (comparison, logical, arithmetic)
 
 ### Functions
+
 - `2. Function Theory.sql` - Overview of SQL functions and their usage
 - `3. Numeric Functions.sql` - Mathematical and numeric operations
 - `4. String Functions.sql` - Text manipulation and string operations
@@ -16,16 +18,37 @@ This repository contains my SQL practice exercises and learning materials. It co
 - `6. DATE Functions.sql` - Date and time manipulation
 - `7. NULL FUNCTIONS.sql` - Handling NULL values (ISNULL, COALESCE, etc.)
 
-### Advanced Topics
+### Intermediate Topics
+
 - `8. JOINS.sql` - Table relationships and join operations
 - `9. SET OPERATORS.sql` - UNION, INTERSECT, EXCEPT operations
 - `10. CASE STMT.sql` - Conditional logic and case statements
-- `11. Window Function Basics.sql` - Introduction to window functions
-- `12. Window Aggregate Functions.sql` - Advanced window function techniques
+
+### Window Functions - Intermediate
+
+- `11-1. Window Function Basics.sql` - Introduction to window functions
+- `11-2. Window Aggregate Functions.sql` - Advanced window function techniques
+- `11-3. Window Rank Functions.sql` - Ranking and ordering functions
+- `11-4. Window Value Functions.sql` - Value-based window operations
+
+### Advanced SQL
+
+- `12. Advanced SQL Theory.md` - Advanced SQL concepts and theory
+- `13. Subqueries.sql` - Nested queries and subquery techniques
+- `14. CTE.sql` - Common Table Expressions
+- `15. VIEWS.sql` - Creating and managing database views
+- `16. CTAS and TEMP TABLES.sql` - Create Table As Select and temporary tables
+- `17. Comparing Advanced Techniques.md` - Comparison of advanced SQL techniques
+- `18. Stored Procedure.sql` - Stored procedures and functions
+- `19. Triggers.sql` - Database triggers and automation
+
+### Performance Optimization
+
+- `20. Indexes.md` - Database indexing strategies and optimization
 
 ## Database Schema
 
-*This section will contain the database schema information used for practice exercises.*
+_This section will contain the database schema information used for practice exercises._
 
 - `MyDatabase.sql`
 
@@ -35,26 +58,28 @@ This repository contains my SQL practice exercises and learning materials. It co
 
 <img src='SalesDB.png' alt='salesdb-schema'/>
 
-
 ### Tables Structure
 
 <!-- Below is the MY SQL CODE FOR THE TABLE CREATION -->
-*BELOW IS THE MY SQL CODE FOR THE TABLE CREATION.*
+
+_BELOW IS THE MY SQL CODE FOR THE TABLE CREATION._
+
 - `MyDatabase.sql` - Database creation and table setup script (MySQL Version)
+
 ```sql
 /*
 =============================================================
 Database Creation and Table Setup Script (MySQL Version)
 =============================================================
 Script Purpose:
-    This script creates a new MySQL database named 'MyDatabase'. 
-    If the database already exists, it is dropped to ensure a clean setup. 
+    This script creates a new MySQL database named 'MyDatabase'.
+    If the database already exists, it is dropped to ensure a clean setup.
     The script then creates two tables: 'customers' and 'orders'
     with their respective schemas, and populates them with sample data.
-    
+
 WARNING:
-    Running this script will drop the entire 'MyDatabase' database if it exists, 
-    permanently deleting all data within it. Proceed with caution and ensure you 
+    Running this script will drop the entire 'MyDatabase' database if it exists,
+    permanently deleting all data within it. Proceed with caution and ensure you
     have proper backups before executing this script.
 */
 
@@ -289,4 +314,4 @@ INSERT INTO `orders_archive` (
 
 ---
 
-*This is a public repository showcasing my SQL learning journey and practice exercises.*
+_This is a public repository showcasing my SQL learning journey and practice exercises._
