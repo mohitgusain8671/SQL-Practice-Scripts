@@ -45,8 +45,9 @@ This repository contains my SQL practice exercises and learning materials. It co
 ### Performance Optimization
 
 - `20. Indexes.md` - Database indexing strategies and optimization
-- `21. Execution Plan.sql` - How SQL Execue Queries and how can we view execution plan of database
+- `21. Execution Plan.sql` - How SQL Execute Queries and how can we view execution plan of database
 - `22. Partitions.sql` - Partitioning the database table for better performance
+- `23. SQL Performance Tips.md` - Comprehensive guide to SQL performance optimization and best practices
 
 
 ## Database Schema
